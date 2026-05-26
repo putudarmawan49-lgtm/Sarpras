@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SARPRAS SMP N 1 AMLAPURA</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            /* Latar belakang menggunakan foto ganesha yang digelapkan secara elegan sesuai gambar */
+            background: linear-gradient(rgba(13, 22, 16, 0.85), rgba(20, 18, 12, 0.9)), url('bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* --- HEADER STYLE (Persis seperti di atas gambar) --- */
+        header {
+            padding: 25px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+            border-bottom: 1px solid rgba(223, 183, 44, 0.15);
+        }
+
+        .header-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px;
+            border-radius: 50%;
+            border: 3px solid #dfb72c;
+            box-shadow: 0 0 20px rgba(223, 183, 44, 0.4);
+        }
+
+        .header-text h1 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #dfb72c;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        }
+
+        header p {
+            font-size: 15px;
+            margin-top: 4px;
+            color: #b3c2b8;
+        }
+
+        /* --- CONTAINER UTAMA --- */
+        .container {
+            display: flex;
+            flex: 1;
+            padding: 20px 40px 40px 40px;
+            gap: 40px;
+        }
+
+        /* --- SIDEBAR MENU KIRI --- */
+        .sidebar {
+            width: 260px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .menu-btn {
+            background-color: rgba(255, 255, 255, 0.04);
+            color: #cedad2;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 14px 18px;
+            text-align: left;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .menu-btn:hover {
+            background-color: rgba(223, 183, 44, 0.15);
+            border-color: #dfb72c;
+            color: #ffffff;
+            transform: translateX(5px);
+        }
+
+        .menu-btn .icon {
+            font-size: 16px;
+        }
+
+        /* --- KONTEN TENGAH (BERANDA UTAMA) --- */
+        .main-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .welcome-screen {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background: rgba(15, 25, 18, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Frame Foto Ganesha di tengah rapi berbentuk melingkar tumpul */
+        .welcome-image {
+            width: 240px;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 24px;
+            border: 4px solid #dfb72c;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+            flex-shrink: 0;
+        }
+
+        .welcome-text-block {
+            flex: 1;
+        }
+
+        .welcome-text-block .tagline {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #b3c2b8;
+            margin-bottom: 5px;
+        }
+
+        .welcome-text-block h2 {
+            font-size: 28px;
+            font-weight: 800;
+            color: #dfb72c;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .welcome-text-block p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #cedad2;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: rgba(8, 13, 10, 0.9);
+            text-align: center;
+            padding: 15px;
+            font-size: 12px;
+            color: #8fa094;
+            border-top: 1px solid rgba(223, 183, 44, 0.1);
+            margin-top: auto;
+        }
+
+        /* --- RESPONSIVE UNTUK LAYAR HP --- */
+        @media (max-width: 900px) {
+            header { flex-direction: column; text-align: center; padding: 20px; }
+            .header-text h1 { font-size: 24px; }
+            .container { flex-direction: column; padding: 15px; gap: 20px; }
+            .sidebar { width: 100%; }
+            .welcome-screen { flex-direction: column; padding: 20px; text-align: center; gap: 20px; }
+            .welcome-image { width: 180px; height: 180px; }
+            .welcome-text-block h2 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="download (1).jpg" alt="Logo SMPN 1 Amlapura" class="header-logo">
+        <div class="header-text">
+            <h1>SARPRAS SMP N 1 AMLAPURA</h1>
+            <p>Aplikasi Portal Integrasi Layanan Digital Sarana & Prasarana Sekolah</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <button class="menu-btn" onclick="bukaForm('https://script.google.com/a/macros/guru.smp.belajar.id/s/AKfycbzlXDwoJTmnO7ZspRQD6ubGFL3gA-IrPDGj8wVScGjX7ssFf0YiDp9g_9xJUMt7nSc/exec')">
+                <span class="icon">📋</span> Pelaporan Sarpras
+            </button>
+            <button class="menu-btn" onclick="bukaForm('https://script.google.com/a/macros/guru.smp.belajar.id/s/AKfycbwK67ZQogcDQ1BirwniVk8ELmaCljTrZ6GCZ14dpRSDsX4ZkCu6Zts-AcuPnJLPfe4/exec')">
+                <span class="icon">⚠️</span> Pengaduan Sekolah
+            </button>
+            <button class="menu-btn" onclick="bukaForm('https://script.google.com/a/macros/guru.smp.belajar.id/s/AKfycbxc9igB_Y7autcv7KrflROCbbfn7jHjO8Vj8y7ORaBYxTpnggWjhPM2MDl4rYypYdhM/exec')">
+                <span class="icon">🔑</span> Peminjaman Sarpras
+            </button>
+            <button class="menu-btn" onclick="bukaForm('https://script.google.com/a/macros/guru.smp.belajar.id/s/AKfycbznQwh53tNa36QDPQZDI9uP6Fhx2IHXUsEB4JuMbPa7Zpwmql22jemvyiyz9WX89nw/exec')">
+                <span class="icon">📥</span> Input Sarpras Baru
+            </button>
+            <button class="menu-btn" onclick="bukaForm('https://script.google.com/a/macros/guru.smp.belajar.id/s/AKfycbziCE0GtTXdWQ5k7AU4Qo9UubXKniRd2nsvAd2Wh0U9SX4XfFMADyE8a2iZIT05XUk/exec')">
+                <span class="icon">💬</span> Kritik & Saran
+            </button>
+        </div>
+
+        <div class="main-content">
+            <div class="welcome-screen">
+                <img src="bg.jpg" alt="Ikon Patung Ganesha" class="welcome-image">
+                
+                <div class="welcome-text-block">
+                    <div class="tagline">PORTAL LAYANAN ONLINE</div>
+                    <h2>SARPRAS SMP N 1 AMLAPURA</h2>
+                    <p>Selamat datang di portal layanan digital terpadu. Sistem ini dirancang untuk memudahkan seluruh civitas akademika dalam melakukan manajemen pelaporan kerusakan, pengaduan fasilitas, inventarisasi data, hingga pengajuan peminjaman Sarana dan Prasarana secara efisien, transparan, dan terintegrasi dalam satu pintu.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 SARPRAS SMP N 1 AMLAPURA. All Rights Reserved.
+    </footer>
+
+    <script>
+        function bukaForm(url) {
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
